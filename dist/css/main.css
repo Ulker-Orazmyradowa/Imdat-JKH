@@ -29,6 +29,7 @@ html {
   box-sizing: border-box;
   font-family: gt-eesti-pro-display-regular;
   font-size: 100%;
+  background-color: #edf2f8;
 }
 body::-webkit-scrollbar,
 html::-webkit-scrollbar {
@@ -89,43 +90,28 @@ main {
 }
 @media (min-width: 112.5em) {
   main {
-    background-color: cyan;
     width: 40%;
   }
 }
 @media (max-width: 112.5em) {
   main {
-    background-color: cornflowerblue;
     width: 65%;
   }
 }
 @media (max-width: 75em) {
   main {
-    background-color: pink;
     width: 85%;
   }
 }
 @media (max-width: 56.25em) {
   main {
-    background-color: green;
     width: 95%;
   }
 }
 @media (max-width: 37.5em) {
   main {
-    background-color: purple;
     width: 100%;
     margin: 0;
-  }
-}
-@media (max-width: 29em) {
-  main {
-    background-color: orange;
-  }
-}
-@media (max-width: 18.75em) {
-  main {
-    background-color: yellow;
   }
 }
 

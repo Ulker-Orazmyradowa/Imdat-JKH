@@ -86,13 +86,13 @@ main {
     margin: 0;
   }
 
-  @include respond(mid-phone) {
-    // background-color: orange;
-  }
+  // @include respond(mid-phone) {
+  //   // background-color: orange;
+  // }
 
-  @include respond(lil-phone) {
-    // background-color: yellow;
-  }
+  // @include respond(lil-phone) {
+  //   // background-color: yellow;
+  // }
   
 }
 #home-container{
