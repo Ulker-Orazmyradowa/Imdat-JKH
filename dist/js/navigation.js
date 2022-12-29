@@ -432,7 +432,7 @@ function uploadFile(name) {
       ? (fileSize = fileTotal + " KB")
       : (fileSize = (loaded / (1024 * 1024)).toFixed(2) + " MB");
     let progressHTML =
-      ' <img src="/assets/profileImg.jpg" /><div class="rowjagaz"><i class="bx bx-file"></i><div class="contentjagaz"><div class="details"><span class="name">' +
+      ' <img src="../assets/profileImg.jpg" /><div class="rowjagaz"><i class="bx bx-file"></i><div class="contentjagaz"><div class="details"><span class="name">' +
       name +'</span><span class="percent">' +
       fileLoaded +
       '%</span></div><div class="progress-bar"><div class="progress" style="width:'+ fileLoaded +'%"></div></div></div></div><span class="timeOfChat"></span>';
@@ -450,7 +450,7 @@ function uploadFile(name) {
       progressArea.remove();
 
       let uploadedHTML =
-        '<img src="/assets/profileImg.jpg" alt="" /><div class="rowjagaz"><i class="bx bx-file"></i><div class="contentjagaz"><div class="details"><span class="name">' +
+        '<img src="../assets/profileImg.jpg" alt="" /><div class="rowjagaz"><i class="bx bx-file"></i><div class="contentjagaz"><div class="details"><span class="name">' +
         name +'</span><span class="size">' +
         fileSize +
         '</span></div></div><i class="bx bx-check"></i></div><span class="timeOfChat"></span>';
