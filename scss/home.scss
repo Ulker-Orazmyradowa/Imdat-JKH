@@ -117,8 +117,6 @@
 
     @include respond(big-desktop) {
       width: 50%;
-      margin-top: 150px;
-      margin-bottom: 100px;
     }
 
     @include respond(small-desktop) {

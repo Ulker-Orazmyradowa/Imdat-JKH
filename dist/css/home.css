@@ -145,16 +145,12 @@
 @media (min-width: 112.5em) {
   .login-Section__cont {
     width: 50%;
-    margin-top: 150px;
-    margin-bottom: 100px;
   }
 }
 @media (max-width: 112.5em) {
   .login-Section__cont {
     width: 40%;
     padding: 20px 30px;
-    margin-top: 130px;
-    margin-bottom: 100px;
   }
 }
 @media (max-width: 75em) {
