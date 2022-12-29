@@ -59,7 +59,6 @@ li {
 main {
   width: 100%;
   margin: auto;
-  
   @include respond(big-desktop) {
     // background-color: cyan;
     width: 40%;
@@ -305,33 +304,33 @@ main {
 #index-container{
   width: 95%;
   margin: auto;
-    @include respond(big-desktop) {
-    background-color: cyan;
-  }
+  //   @include respond(big-desktop) {
+  //   background-color: cyan;
+  // }
 
   @include respond(small-desktop){
-    background-color: cornflowerblue;
+    // background-color: cornflowerblue;
     width: 100%;
   }
 
   @include respond(tab-land) {
-    background-color: pink;
+    // background-color: pink;
   }
 
   @include respond(tab-port) {
-    background-color: green;
+    // background-color: green;
   }
 
   @include respond(phone) {
-    background-color: purple;
+    // background-color: purple;
   }
 
   @include respond(mid-phone) {
-    background-color: orange;
+    // background-color: orange;
   }
 
   @include respond(lil-phone) {
-    background-color: yellow;
+    // background-color: yellow;
   }
 }
 
@@ -355,13 +354,13 @@ main {
     height: 3.5rem;
   }
 
-  @include respond(tab-port) {
-    height: 3rem;
-  }
+  // @include respond(tab-port) {
+  //   height: 3rem;
+  // }
 
-  @include respond(phone) {
-    height: 3rem;
-  }
+  // @include respond(phone) {
+  //   height: 3rem;
+  // }
 
 
   &__logo {

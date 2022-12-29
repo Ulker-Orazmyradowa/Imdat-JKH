@@ -349,43 +349,11 @@ main {
   width: 95%;
   margin: auto;
 }
-@media (min-width: 112.5em) {
-  #index-container {
-    background-color: cyan;
-  }
-}
 @media (max-width: 112.5em) {
   #index-container {
-    background-color: cornflowerblue;
     width: 100%;
   }
 }
-@media (max-width: 75em) {
-  #index-container {
-    background-color: pink;
-  }
-}
-@media (max-width: 56.25em) {
-  #index-container {
-    background-color: green;
-  }
-}
-@media (max-width: 37.5em) {
-  #index-container {
-    background-color: purple;
-  }
-}
-@media (max-width: 29em) {
-  #index-container {
-    background-color: orange;
-  }
-}
-@media (max-width: 18.75em) {
-  #index-container {
-    background-color: yellow;
-  }
-}
-
 .navigation {
   display: flex;
   flex-direction: row;
@@ -412,16 +380,6 @@ main {
 @media (max-width: 75em) {
   .navigation {
     height: 3.5rem;
-  }
-}
-@media (max-width: 56.25em) {
-  .navigation {
-    height: 3rem;
-  }
-}
-@media (max-width: 37.5em) {
-  .navigation {
-    height: 3rem;
   }
 }
 .navigation__logo {
