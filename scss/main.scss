@@ -1,0 +1,706 @@
+@import "./mixins";
+@import "./variables";
+@import "./responsive";
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gt-eesti-pro-display-regular;
+  font-size: 100%;
+  // background-color: #edf2f8;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  @include respond(big-desktop) {
+    font-size: 105%;
+  }
+
+  @include respond(small-desktop){
+    font-size: 100%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 96%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 94%;
+  }
+
+  @include respond(phone) {
+    font-size: 90%;
+  }
+
+  @include respond(mid-phone) {
+    font-size: 86%;
+  }
+
+  @include respond(lil-phone) {
+    font-size: 82%;
+  }
+
+}
+
+
+
+
+a,
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+
+
+main {
+  width: 100%;
+  margin: auto;
+  
+  @include respond(big-desktop) {
+    background-color: cyan;
+    width: 40%;
+  }
+
+  @include respond(small-desktop){
+    background-color: cornflowerblue;
+    width: 65%;
+  }
+
+  @include respond(tab-land) {
+    background-color: pink;
+    width: 85%;
+  }
+
+  @include respond(tab-port) {
+    background-color: green;
+    width: 95%;
+  }
+
+  @include respond(phone) {
+    background-color: purple;
+    width: 100%;
+    margin: 0;
+  }
+
+  @include respond(mid-phone) {
+    background-color: orange;
+  }
+
+  @include respond(lil-phone) {
+    background-color: yellow;
+  }
+  
+}
+#home-container{
+  margin: auto;
+  @include respond(big-desktop) {
+  width: 85%;
+
+  }
+
+  @include respond(small-desktop){
+    width: 90%;
+  }
+
+  @include respond(tab-land) {
+    width: 95%;
+  }
+  @include respond(tab-port) {
+    width: 100%;
+    margin: 0;
+  }
+  .navigation {
+    @include flex(row, space-between, center);
+    top: 0;
+    width: 98%;
+    padding: 0 1% 0 1%;
+    position: fixed;
+    background-color: #edf2f8;
+    height: 5rem;
+    z-index: 1;
+  
+    @include respond(big-desktop) {
+      height: 4.5rem;
+    }
+    @include respond(small-desktop){
+      height: 4rem;
+    }
+    @include respond(tab-land) {
+      height: 3.5rem;
+    }
+  
+    @include respond(tab-port) {
+      height: 3rem;
+    }
+  
+    @include respond(phone) {
+      
+      height: 3rem;
+    }
+  
+  
+    &__logo {
+      width: 200px;
+      height: auto;
+      margin-left: 20px;
+      
+  
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  
+    &__languageOnly {
+      @extend .navigation__languageAndLogin;
+      margin-right: 20px;
+    }
+  
+    &__languageAndLogin {
+      @include flex(row, space-between, center);
+      margin-right: 20px;
+      .btn {
+        @include linkjagaz;
+        padding: 5px;
+        @include transition;
+        margin-left: 10px;
+        font-size: 13px !important;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      #loginBtn {
+        padding: 7px 20px;
+        // font-size: 15px;
+      }
+      .activeLanguage {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+  
+  
+    &__left {
+      @include flex(row, space-between, center);
+      &--navIcon {
+        font-size: 25px;
+        @include flex(row, center, center);
+        
+        i {
+          // font-size: 30px;
+          color: gray;
+        }
+      }
+      &--mainLogo {
+        margin-left: 20px;
+
+      }
+  
+      &--searchField {
+        position: relative;
+        margin-left: 15px;
+
+        input {
+          width: 100%;
+          padding: 6px 6px 6px 30px;
+          border: 1px solid #d8e2ee;
+          border-radius: 18px;
+          &:focus {
+            border: 1px solid $primary-color;
+            outline: none;
+          }
+          &::placeholder {
+            color: #d8e2ee;
+          }
+        }
+        .searchImg {
+          position: absolute;
+          top: 6px;
+          left: 10px;
+          height: 15px;
+          width: 15px;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  
+    &__right {
+      @include flex(row, space-between, center);
+  
+      &--languageOnly {
+        margin-right: 30px;
+  
+        .btn {
+          @include linkjagaz;
+          font-size: 13px;
+          padding: 5px;
+          @include transition;
+          margin-left: 10px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+        .activeLanguage {
+          background-color: $primary-color;
+          color: white;
+        }
+      }
+      &--chatbox {
+        height: 17px;
+        width: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &--bellIcon{
+        position: relative;
+        cursor: pointer;
+        margin-right: 20px;
+        font-size: 20px;
+        
+        span{
+          position: absolute;
+          top: 4px;
+          left: 50%;
+          width: 8px;
+          height: 8px;
+          background: $primary-color;
+          border-radius: 50%;
+        }
+        i {
+          text-align: center;
+          color: gray;
+          // font-size: 20px;
+          margin-top: 7px;
+        }
+      }
+  
+      &--loginPhoto {
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        cursor: pointer;
+  
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+#index-container{
+  width: 95%;
+  margin: auto;
+    @include respond(big-desktop) {
+    background-color: cyan;
+  }
+
+  @include respond(small-desktop){
+    background-color: cornflowerblue;
+    width: 100%;
+  }
+
+  @include respond(tab-land) {
+    background-color: pink;
+  }
+
+  @include respond(tab-port) {
+    background-color: green;
+  }
+
+  @include respond(phone) {
+    background-color: purple;
+  }
+
+  @include respond(mid-phone) {
+    background-color: orange;
+  }
+
+  @include respond(lil-phone) {
+    background-color: yellow;
+  }
+}
+
+.navigation {
+  @include flex(row, space-between, center);
+  top: 0;
+  width: 98%;
+  padding: 0 1% 0 1%;
+  position: fixed;
+  background-color: #edf2f8;
+  height: 5rem;
+  z-index: 1;
+
+  @include respond(big-desktop) {
+    height: 4.5rem;
+  }
+  @include respond(small-desktop){
+    height: 4rem;
+  }
+  @include respond(tab-land) {
+    height: 3.5rem;
+  }
+
+  @include respond(tab-port) {
+    height: 3rem;
+  }
+
+  @include respond(phone) {
+    height: 3rem;
+  }
+
+
+  &__logo {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    
+
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__languageOnly {
+    @extend .navigation__languageAndLogin;
+    margin-right: 20px;
+
+  }
+
+  &__languageAndLogin {
+    @include flex(row, space-between, center);
+    margin-right: 20px;
+
+    .btn {
+      @include linkjagaz;
+      padding: 5px;
+      @include transition;
+      margin-left: 10px;
+      font-size: 13px !important;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    #loginBtn {
+      padding: 7px 20px;
+      // font-size: 15px;
+    }
+    .activeLanguage {
+      background-color: $primary-color;
+      color: white;
+    }
+  }
+
+
+  &__left {
+    @include flex(row, space-between, center);
+    // border: 2px solid lime;
+    margin-left: 7px;
+    &--navIcon {
+      font-size: 25px;
+      @include flex(row, center, center);
+      i {
+        // font-size: 30px;
+        color: gray;
+      }
+      @include respond(tab-land) {
+        display:none;
+      } 
+    }
+    .responsive{
+      display: none;
+      @include respond(tab-land) {
+        display:block;
+      }
+    }
+
+
+    &--mainLogo {
+      margin-left: 20px;
+      height: auto;
+      width: 140px;
+      // @include respond(phone){
+      //   width: 130px;
+      // }
+      @include respond (mid-phone){
+        width: 130px;
+        margin-left: 5px;
+        display: none;
+      }
+      img{
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &--searchField {
+      position: relative;
+      margin-left: 15px;
+      @include respond(phone){
+        display: none;
+      }
+      input {
+        width: 100%;
+        padding: 6px 6px 6px 30px;
+        border: 1px solid #d8e2ee;
+        border-radius: 18px;
+        &:focus {
+          border: 1px solid $primary-color;
+          outline: none;
+        }
+        &::placeholder {
+          color: #d8e2ee;
+        }
+      }
+      .searchImg {
+        position: absolute;
+        top: 6px;
+        left: 10px;
+        height: 15px;
+        width: 15px;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__right {
+    @include flex(row, space-between, center);
+
+    // #searchIcon{
+    //   display: none;
+    //   @include respond (phone){
+    //     display: block;
+    //     margin-right: 20px;
+    //   }
+    // }
+
+    .search{
+      display: none;
+      @include respond (phone){
+        display: block;
+      }
+      position: relative;
+      width: 25px;
+      height: 25px;
+      // background: #fff;
+      border-radius: 60px;
+      transition: all .5s; 
+      // box-shadow: 0 0 0 2px #d8e2ee;
+      margin-right: 15px;
+      overflow: hidden !important;
+
+      .input{
+        position:relative;
+        width: 150px;
+        height: 22px;
+        left: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        border-bottom: 2px solid $primary-color;
+
+        @include respond(lil-phone){
+          width: 70px;
+          height: 19px;
+          left: 25px;
+        }
+        
+        input{
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          &::placeholder{
+            color: #c4cdda; 
+          }
+        }
+      }
+
+      .clear{
+        position: absolute;
+        top: 30%;
+        transform: translate(-50%);
+        height: 10px;
+        // border: 2PX SOLID LIME;
+        width: 10px;
+        right: 0px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
+        @include respond(lil-phone){
+          top: 25%;
+          right: -5px;
+        }
+
+        &::before{
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 8px;
+          background-color: $primary-color;
+          transform: rotate(45deg);
+
+        }
+
+        &::after{
+          position: absolute;
+          content: "";
+          width: 1px;
+          height: 8px;
+          background-color: $primary-color;
+          transform: rotate(315deg);
+
+        }
+      }
+
+      .icon{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        // background: #fff;
+        border-radius: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        cursor: pointer;
+
+
+
+        &::before{
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border: 2.5px solid $primary-color;
+          border-radius: 55%;
+          transform:translate(1px, 0px);
+          @include respond(lil-phone){
+            height: 7px;
+            width: 7px;
+          }
+        }
+        &::after{
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 10px;
+          background: $primary-color;
+          transform: translate(9px, 9px) rotate(315deg);
+          @include respond(lil-phone){
+            height: 5px;
+            transform: translate(7px, 7px) rotate(315deg);
+          }
+        }
+        
+      }
+    }
+    .search.activeSearch{
+      width: 200px;
+      .clear{opacity: 1;}
+
+      @include respond(mid-phone){
+        width: 160px;
+      }
+      @include respond(lil-phone){
+        width: 110px;
+      }
+    }
+
+    
+
+    &--languageOnly {
+      margin-right: 30px;
+      @include respond(tab-port) {
+        display: none;
+      }
+  
+
+      .btn {
+        @include linkjagaz;
+        font-size: 13px;
+        padding: 5px;
+        @include transition;
+        margin-left: 10px;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+      .activeLanguage {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+    &--chatbox {
+      height: 17px;
+      width: 20px;
+      margin-right: 20px;
+      cursor: pointer;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &--bellIcon{
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+      font-size: 20px;
+      
+      span{
+        position: absolute;
+        top: 4px;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        background: $primary-color;
+        border-radius: 50%;
+      }
+      i {
+        text-align: center;
+        color: gray;
+        // font-size: 20px;
+        margin-top: 7px;
+      }
+    }
+
+    &--loginPhoto {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+  }
+}
