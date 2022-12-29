@@ -322,7 +322,7 @@ function newMessage() {
     return false;
   }
   $(
-    '<li class="sent"><img src="/assets/profileImg.jpg" alt="" /><p>' +
+    '<li class="sent"><img src="../assets/profileImg.jpg" alt="" /><p>' +
       message +
       "</p><span class='timeOfChat'></span></li>"
   ).appendTo($(".messages ul"));
