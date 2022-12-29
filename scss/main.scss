@@ -96,22 +96,23 @@ main {
 }
 #home-container{
   margin: auto;
-  @include respond(big-desktop) {
-  width: 85%;
+  width: 95%;
+  // @include respond(big-desktop) {
+  // width: 85%;
 
-  }
+  // }
 
   @include respond(small-desktop){
-    width: 90%;
+    width: 100%;
   }
 
-  @include respond(tab-land) {
-    width: 95%;
-  }
-  @include respond(tab-port) {
-    width: 100%;
-    margin: 0;
-  }
+  // @include respond(tab-land) {
+  //   width: 95%;
+  // }
+  // @include respond(tab-port) {
+  //   width: 100%;
+  //   margin: 0;
+  // }
   .navigation {
     @include flex(row, space-between, center);
     top: 0;
@@ -132,14 +133,14 @@ main {
       height: 3.5rem;
     }
   
-    @include respond(tab-port) {
-      height: 3rem;
-    }
+    // @include respond(tab-port) {
+    //   height: 3rem;
+    // }
   
-    @include respond(phone) {
+    // @include respond(phone) {
       
-      height: 3rem;
-    }
+    //   height: 3rem;
+    // }
   
   
     &__logo {
@@ -178,13 +179,14 @@ main {
       }
       .activeLanguage {
         background-color: $primary-color;
-        color: white;
+        color: #fff;
       }
     }
   
   
     &__left {
       @include flex(row, space-between, center);
+      margin-left: 7px;
       &--navIcon {
         font-size: 25px;
         @include flex(row, center, center);
@@ -196,7 +198,17 @@ main {
       }
       &--mainLogo {
         margin-left: 20px;
-
+        height: auto;
+        width: 140px;
+        @include respond (mid-phone){
+          width: 130px;
+          margin-left: 5px;
+          display: none;
+        }
+        img{
+          height: 100%;
+          width: 100%;
+        }
       }
   
       &--searchField {
@@ -313,25 +325,25 @@ main {
     width: 100%;
   }
 
-  @include respond(tab-land) {
-    // background-color: pink;
-  }
+  // @include respond(tab-land) {
+  //   // background-color: pink;
+  // }
 
-  @include respond(tab-port) {
-    // background-color: green;
-  }
+  // @include respond(tab-port) {
+  //   // background-color: green;
+  // }
 
-  @include respond(phone) {
-    // background-color: purple;
-  }
+  // @include respond(phone) {
+  //   // background-color: purple;
+  // }
 
-  @include respond(mid-phone) {
-    // background-color: orange;
-  }
+  // @include respond(mid-phone) {
+  //   // background-color: orange;
+  // }
 
-  @include respond(lil-phone) {
-    // background-color: yellow;
-  }
+  // @include respond(lil-phone) {
+  //   // background-color: yellow;
+  // }
 }
 
 .navigation {
@@ -401,7 +413,7 @@ main {
     }
     .activeLanguage {
       background-color: $primary-color;
-      color: white;
+      color: #fff;
     }
   }
 
