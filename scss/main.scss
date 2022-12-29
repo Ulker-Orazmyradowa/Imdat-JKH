@@ -8,7 +8,7 @@ html {
   box-sizing: border-box;
   font-family: gt-eesti-pro-display-regular;
   font-size: 100%;
-  // background-color: #edf2f8;
+  background-color: #edf2f8;
 
   &::-webkit-scrollbar {
     display: none;
@@ -61,37 +61,37 @@ main {
   margin: auto;
   
   @include respond(big-desktop) {
-    background-color: cyan;
+    // background-color: cyan;
     width: 40%;
   }
 
   @include respond(small-desktop){
-    background-color: cornflowerblue;
+    // background-color: cornflowerblue;
     width: 65%;
   }
 
   @include respond(tab-land) {
-    background-color: pink;
+    // background-color: pink;
     width: 85%;
   }
 
   @include respond(tab-port) {
-    background-color: green;
+    // background-color: green;
     width: 95%;
   }
 
   @include respond(phone) {
-    background-color: purple;
+    // background-color: purple;
     width: 100%;
     margin: 0;
   }
 
   @include respond(mid-phone) {
-    background-color: orange;
+    // background-color: orange;
   }
 
   @include respond(lil-phone) {
-    background-color: yellow;
+    // background-color: yellow;
   }
   
 }
