@@ -124,215 +124,6 @@ main {
     width: 100%;
   }
 }
-#home-container .navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  top: 0;
-  width: 98%;
-  padding: 0 1% 0 1%;
-  position: fixed;
-  background-color: #edf2f8;
-  height: 5rem;
-  z-index: 1;
-}
-@media (min-width: 112.5em) {
-  #home-container .navigation {
-    height: 4.5rem;
-  }
-}
-@media (max-width: 112.5em) {
-  #home-container .navigation {
-    height: 4rem;
-  }
-}
-@media (max-width: 75em) {
-  #home-container .navigation {
-    height: 3.5rem;
-  }
-}
-#home-container .navigation__logo {
-  width: 200px;
-  height: auto;
-  margin-left: 20px;
-}
-#home-container .navigation__logo img {
-  width: 100%;
-  height: 100%;
-}
-#home-container .navigation__languageOnly {
-  margin-right: 20px;
-}
-#home-container .navigation__languageAndLogin, #home-container .navigation__languageOnly {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 20px;
-}
-#home-container .navigation__languageAndLogin .btn, #home-container .navigation__languageOnly .btn {
-  color: #2a7be4;
-  border: 1px solid #2a7be4;
-  border-radius: 3px;
-  transition: all 0.3s;
-  padding: 5px;
-  transition: all 0.3s;
-  margin-left: 10px;
-  font-size: 13px !important;
-}
-#home-container .navigation__languageAndLogin .btn:hover, #home-container .navigation__languageOnly .btn:hover {
-  color: #fff;
-  background-color: #2a7be4;
-}
-#home-container .navigation__languageAndLogin .btn:first-child, #home-container .navigation__languageOnly .btn:first-child {
-  margin-left: 0;
-}
-#home-container .navigation__languageAndLogin #loginBtn, #home-container .navigation__languageOnly #loginBtn {
-  padding: 7px 20px;
-}
-#home-container .navigation__languageAndLogin .activeLanguage, #home-container .navigation__languageOnly .activeLanguage {
-  background-color: #2a7be4;
-  color: #fff;
-}
-#home-container .navigation__left {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 7px;
-}
-#home-container .navigation__left--navIcon {
-  font-size: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-#home-container .navigation__left--navIcon i {
-  color: gray;
-}
-#home-container .navigation__left--mainLogo {
-  margin-left: 20px;
-  height: auto;
-  width: 140px;
-}
-@media (max-width: 29em) {
-  #home-container .navigation__left--mainLogo {
-    width: 130px;
-    margin-left: 5px;
-    display: none;
-  }
-}
-#home-container .navigation__left--mainLogo img {
-  height: 100%;
-  width: 100%;
-}
-#home-container .navigation__left--searchField {
-  position: relative;
-  margin-left: 15px;
-}
-#home-container .navigation__left--searchField input {
-  width: 100%;
-  padding: 6px 6px 6px 30px;
-  border: 1px solid #d8e2ee;
-  border-radius: 18px;
-}
-#home-container .navigation__left--searchField input:focus {
-  border: 1px solid #2a7be4;
-  outline: none;
-}
-#home-container .navigation__left--searchField input::-moz-placeholder {
-  color: #d8e2ee;
-}
-#home-container .navigation__left--searchField input:-ms-input-placeholder {
-  color: #d8e2ee;
-}
-#home-container .navigation__left--searchField input::placeholder {
-  color: #d8e2ee;
-}
-#home-container .navigation__left--searchField .searchImg {
-  position: absolute;
-  top: 6px;
-  left: 10px;
-  height: 15px;
-  width: 15px;
-}
-#home-container .navigation__left--searchField .searchImg img {
-  height: 100%;
-  width: 100%;
-}
-#home-container .navigation__right {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#home-container .navigation__right--languageOnly {
-  margin-right: 30px;
-}
-#home-container .navigation__right--languageOnly .btn {
-  color: #2a7be4;
-  border: 1px solid #2a7be4;
-  border-radius: 3px;
-  transition: all 0.3s;
-  font-size: 13px;
-  padding: 5px;
-  transition: all 0.3s;
-  margin-left: 10px;
-}
-#home-container .navigation__right--languageOnly .btn:hover {
-  color: #fff;
-  background-color: #2a7be4;
-}
-#home-container .navigation__right--languageOnly .btn:first-child {
-  margin-left: 0;
-}
-#home-container .navigation__right--languageOnly .activeLanguage {
-  background-color: #2a7be4;
-  color: white;
-}
-#home-container .navigation__right--chatbox {
-  height: 17px;
-  width: 20px;
-  margin-right: 20px;
-  cursor: pointer;
-}
-#home-container .navigation__right--chatbox img {
-  width: 100%;
-  height: 100%;
-}
-#home-container .navigation__right--bellIcon {
-  position: relative;
-  cursor: pointer;
-  margin-right: 20px;
-  font-size: 20px;
-}
-#home-container .navigation__right--bellIcon span {
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  background: #2a7be4;
-  border-radius: 50%;
-}
-#home-container .navigation__right--bellIcon i {
-  text-align: center;
-  color: gray;
-  margin-top: 7px;
-}
-#home-container .navigation__right--loginPhoto {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-#home-container .navigation__right--loginPhoto img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-}
 
 #index-container {
   width: 95%;
@@ -384,14 +175,14 @@ main {
 .navigation__languageOnly {
   margin-right: 20px;
 }
-.navigation__languageAndLogin, #home-container .navigation__languageOnly, .navigation__languageOnly {
+.navigation__languageAndLogin, .navigation__languageOnly {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-right: 20px;
 }
-.navigation__languageAndLogin .btn, #home-container .navigation__languageOnly .btn, .navigation__languageOnly .btn {
+.navigation__languageAndLogin .btn, .navigation__languageOnly .btn {
   color: #2a7be4;
   border: 1px solid #2a7be4;
   border-radius: 3px;
@@ -401,17 +192,17 @@ main {
   margin-left: 10px;
   font-size: 13px !important;
 }
-.navigation__languageAndLogin .btn:hover, #home-container .navigation__languageOnly .btn:hover, .navigation__languageOnly .btn:hover {
+.navigation__languageAndLogin .btn:hover, .navigation__languageOnly .btn:hover {
   color: #fff;
   background-color: #2a7be4;
 }
-.navigation__languageAndLogin .btn:first-child, #home-container .navigation__languageOnly .btn:first-child, .navigation__languageOnly .btn:first-child {
+.navigation__languageAndLogin .btn:first-child, .navigation__languageOnly .btn:first-child {
   margin-left: 0;
 }
 .navigation__languageAndLogin #loginBtn, .navigation__languageOnly #loginBtn {
   padding: 7px 20px;
 }
-.navigation__languageAndLogin .activeLanguage, #home-container .navigation__languageOnly .activeLanguage, .navigation__languageOnly .activeLanguage {
+.navigation__languageAndLogin .activeLanguage, .navigation__languageOnly .activeLanguage {
   background-color: #2a7be4;
   color: #fff;
 }

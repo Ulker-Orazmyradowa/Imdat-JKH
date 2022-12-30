@@ -94,14 +94,216 @@ main {
   // }
   
 }
+
+// .navigation {
+//   @include flex(row, space-between, center);
+//   top: 0;
+//   width: 95%;
+//   // padding: 0 1% 0 1%;
+//   position: fixed;
+//   background-color: #edf2f8;
+//   height: 5rem;
+//   z-index: 1;
+  
+
+//   @include respond(big-desktop) {
+//     height: 4.5rem;
+//   }
+//   @include respond(small-desktop){
+//     height: 4rem;
+//   }
+//   @include respond(tab-land) {
+//     height: 3.5rem;
+//   }
+
+//   // @include respond(tab-port) {
+//   //   height: 3rem;
+//   // }
+
+//   // @include respond(phone) {
+    
+//   //   height: 3rem;
+//   // }
+
+
+//   &__logo {
+//     width: 200px;
+//     height: auto;
+//     margin-left: 20px;
+    
+
+//     img{
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+
+//   &__languageOnly {
+//     @extend .navigation__languageAndLogin;
+//     margin-right: 20px;
+//   }
+
+//   &__languageAndLogin {
+//     @include flex(row, space-between, center);
+//     margin-right: 20px;
+//     .btn {
+//       @include linkjagaz;
+//       padding: 5px;
+//       @include transition;
+//       margin-left: 10px;
+//       font-size: 13px !important;
+//       &:first-child {
+//         margin-left: 0;
+//       }
+//     }
+//     #loginBtn {
+//       padding: 7px 20px;
+//       // font-size: 15px;
+//     }
+//     .activeLanguage {
+//       background-color: $primary-color;
+//       color: #fff;
+//     }
+//   }
+
+
+//   &__left {
+//     @include flex(row, space-between, center);
+//     margin-left: 7px;
+//     &--navIcon {
+//       font-size: 25px;
+//       @include flex(row, center, center);
+      
+//       i {
+//         // font-size: 30px;
+//         color: gray;
+//       }
+//     }
+//     &--mainLogo {
+//       margin-left: 20px;
+//       height: auto;
+//       width: 140px;
+//       @include respond (mid-phone){
+//         width: 130px;
+//         margin-left: 5px;
+//         display: none;
+//       }
+//       img{
+//         height: 100%;
+//         width: 100%;
+//       }
+//     }
+
+//     &--searchField {
+//       position: relative;
+//       margin-left: 15px;
+
+//       input {
+//         width: 100%;
+//         padding: 6px 6px 6px 30px;
+//         border: 1px solid #d8e2ee;
+//         border-radius: 18px;
+//         &:focus {
+//           border: 1px solid $primary-color;
+//           outline: none;
+//         }
+//         &::placeholder {
+//           color: #d8e2ee;
+//         }
+//       }
+//       .searchImg {
+//         position: absolute;
+//         top: 6px;
+//         left: 10px;
+//         height: 15px;
+//         width: 15px;
+//         img {
+//           height: 100%;
+//           width: 100%;
+//         }
+//       }
+//     }
+//   }
+
+//   &__right {
+//     @include flex(row, space-between, center);
+
+//     &--languageOnly {
+//       margin-right: 30px;
+
+//       .btn {
+//         @include linkjagaz;
+//         font-size: 13px;
+//         padding: 5px;
+//         @include transition;
+//         margin-left: 10px;
+//         &:first-child {
+//           margin-left: 0;
+//         }
+//       }
+//       .activeLanguage {
+//         background-color: $primary-color;
+//         color: white;
+//       }
+//     }
+//     &--chatbox {
+//       height: 17px;
+//       width: 20px;
+//       margin-right: 20px;
+//       cursor: pointer;
+//       img {
+//         width: 100%;
+//         height: 100%;
+//       }
+//     }
+//     &--bellIcon{
+//       position: relative;
+//       cursor: pointer;
+//       margin-right: 20px;
+//       font-size: 20px;
+      
+//       span{
+//         position: absolute;
+//         top: 4px;
+//         left: 50%;
+//         width: 8px;
+//         height: 8px;
+//         background: $primary-color;
+//         border-radius: 50%;
+//       }
+//       i {
+//         text-align: center;
+//         color: gray;
+//         // font-size: 20px;
+//         margin-top: 7px;
+//       }
+//     }
+
+//     &--loginPhoto {
+//       height: 25px;
+//       width: 25px;
+//       border-radius: 50%;
+//       cursor: pointer;
+
+//       img {
+//         height: 100%;
+//         width: 100%;
+//         border-radius: 50%;
+//       }
+//     }
+//   }
+// }
+
 #home-container{
   margin: auto;
   width: 95%;
+  // height: 100vh;
   // @include respond(big-desktop) {
   // width: 85%;
 
   // }
 
+  // @include flex(row, center, center);
   @include respond(small-desktop){
     width: 100%;
   }
@@ -113,203 +315,7 @@ main {
   //   width: 100%;
   //   margin: 0;
   // }
-  .navigation {
-    @include flex(row, space-between, center);
-    top: 0;
-    width: 98%;
-    padding: 0 1% 0 1%;
-    position: fixed;
-    background-color: #edf2f8;
-    height: 5rem;
-    z-index: 1;
-  
-    @include respond(big-desktop) {
-      height: 4.5rem;
-    }
-    @include respond(small-desktop){
-      height: 4rem;
-    }
-    @include respond(tab-land) {
-      height: 3.5rem;
-    }
-  
-    // @include respond(tab-port) {
-    //   height: 3rem;
-    // }
-  
-    // @include respond(phone) {
-      
-    //   height: 3rem;
-    // }
-  
-  
-    &__logo {
-      width: 200px;
-      height: auto;
-      margin-left: 20px;
-      
-  
-      img{
-        width: 100%;
-        height: 100%;
-      }
-    }
-  
-    &__languageOnly {
-      @extend .navigation__languageAndLogin;
-      margin-right: 20px;
-    }
-  
-    &__languageAndLogin {
-      @include flex(row, space-between, center);
-      margin-right: 20px;
-      .btn {
-        @include linkjagaz;
-        padding: 5px;
-        @include transition;
-        margin-left: 10px;
-        font-size: 13px !important;
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-      #loginBtn {
-        padding: 7px 20px;
-        // font-size: 15px;
-      }
-      .activeLanguage {
-        background-color: $primary-color;
-        color: #fff;
-      }
-    }
-  
-  
-    &__left {
-      @include flex(row, space-between, center);
-      margin-left: 7px;
-      &--navIcon {
-        font-size: 25px;
-        @include flex(row, center, center);
-        
-        i {
-          // font-size: 30px;
-          color: gray;
-        }
-      }
-      &--mainLogo {
-        margin-left: 20px;
-        height: auto;
-        width: 140px;
-        @include respond (mid-phone){
-          width: 130px;
-          margin-left: 5px;
-          display: none;
-        }
-        img{
-          height: 100%;
-          width: 100%;
-        }
-      }
-  
-      &--searchField {
-        position: relative;
-        margin-left: 15px;
 
-        input {
-          width: 100%;
-          padding: 6px 6px 6px 30px;
-          border: 1px solid #d8e2ee;
-          border-radius: 18px;
-          &:focus {
-            border: 1px solid $primary-color;
-            outline: none;
-          }
-          &::placeholder {
-            color: #d8e2ee;
-          }
-        }
-        .searchImg {
-          position: absolute;
-          top: 6px;
-          left: 10px;
-          height: 15px;
-          width: 15px;
-          img {
-            height: 100%;
-            width: 100%;
-          }
-        }
-      }
-    }
-  
-    &__right {
-      @include flex(row, space-between, center);
-  
-      &--languageOnly {
-        margin-right: 30px;
-  
-        .btn {
-          @include linkjagaz;
-          font-size: 13px;
-          padding: 5px;
-          @include transition;
-          margin-left: 10px;
-          &:first-child {
-            margin-left: 0;
-          }
-        }
-        .activeLanguage {
-          background-color: $primary-color;
-          color: white;
-        }
-      }
-      &--chatbox {
-        height: 17px;
-        width: 20px;
-        margin-right: 20px;
-        cursor: pointer;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      &--bellIcon{
-        position: relative;
-        cursor: pointer;
-        margin-right: 20px;
-        font-size: 20px;
-        
-        span{
-          position: absolute;
-          top: 4px;
-          left: 50%;
-          width: 8px;
-          height: 8px;
-          background: $primary-color;
-          border-radius: 50%;
-        }
-        i {
-          text-align: center;
-          color: gray;
-          // font-size: 20px;
-          margin-top: 7px;
-        }
-      }
-  
-      &--loginPhoto {
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
-        cursor: pointer;
-  
-        img {
-          height: 100%;
-          width: 100%;
-          border-radius: 50%;
-        }
-      }
-    }
-  }
 }
 
 
@@ -355,6 +361,7 @@ main {
   background-color: #edf2f8;
   height: 5rem;
   z-index: 1;
+  // border: 2px solid lime;
 
   @include respond(big-desktop) {
     height: 4.5rem;

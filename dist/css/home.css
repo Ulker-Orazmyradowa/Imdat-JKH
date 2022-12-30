@@ -46,7 +46,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 20px;
+  padding-left: 30px;
 }
 @media (max-width: 56.25em) {
   .home-Section .about__name {
@@ -120,7 +120,7 @@
   text-align: center;
   border-bottom: 1px solid #5d6e82;
 }
-.home-Section .module__description--service h5 {
+.home-Section .module__description--service h4 {
   border-top: 1px solid #091122;
   padding: 10px 0;
   -webkit-margin-after: 0;
@@ -129,11 +129,12 @@
           margin-block-start: 0;
 }
 
-.login-Section, .forgetPassword-Section, .verification-Section, .register-Section {
+.login-Section, .forgetPassword-Section, .verification-Section, .container .register-Section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 .login-Section__cont {
   width: 30%;
@@ -149,7 +150,6 @@
 }
 @media (max-width: 112.5em) {
   .login-Section__cont {
-    width: 40%;
     padding: 20px 30px;
   }
 }
@@ -186,7 +186,25 @@
   align-items: center;
   margin: 20px 0;
 }
-.login-Section__cont--item h5 {
+@media (max-width: 75em) {
+  .login-Section__cont--item:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .login-Section__cont--item:first-child h2 {
+    margin-bottom: 10px;
+  }
+  .login-Section__cont--item:first-child p {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.login-Section__cont--item h2 {
   -webkit-margin-before: 0;
           margin-block-start: 0;
   -webkit-margin-after: 0;
@@ -306,8 +324,16 @@
   text-decoration: underline;
 }
 
-.register-Section {
-  margin-top: 5rem;
+.container {
+  width: 98%;
+}
+.container .register-Section {
+  margin-top: 6rem;
+  width: 90%;
+  margin: 80px auto;
+}
+.container .navigation {
+  width: 95%;
 }
 
 .forgetPassword-Section .login-Section__cont--forget h3, .verification-Section .login-Section__cont--forget h3 {
